@@ -1,0 +1,49 @@
+Project: Library Management System
+
+Setup:
+Create a Spring Boot application with Thymeleaf, Spring Web, and other necessary dependencies.
+
+Entities:
+Book: Should have an ID, title, author, ISBN, and a borrowed status.
+Borrower: Should have an ID, name, and a list of borrowed books.
+
+Features:
+
+Add a Book:
+Create a form where users can add a new book with its title, author, and ISBN. Use
+@ModelAttribute for binding the form data to a Book object.
+
+List All Books:
+Display a table of all books in the system. Next to each book, there should be an "Edit" and
+"Borrow" link/button.
+
+Edit a Book:
+When users click on the "Edit" link/button next to a book, they should be taken to an edit form
+populated with that book's data. Use th:value to populate the form fields and @RequestParam to
+fetch the book ID from the URL. Also, use @ModelAttribute to bind the updated data and save
+changes.
+
+Borrow a Book:
+When users click on the "Borrow" link/button, they should be taken to a new form where they
+can input their name to borrow the book. Use @ModelAttribute to bind the form data to a
+Borrower object and update the book's status.
+
+Return a Book:
+On the list of all books, if a book is borrowed, display the borrower's name and a "Return"
+link/button next to it. When clicked, the book should be returned (i.e., its borrowed status
+should be updated).
+
+List All Borrowers:
+Display a list of all borrowers and the books they've borrowed.
+
+Bonus (if you're up for it):
+Implement search functionality where users can search for books by title or author.
+Implement validation to ensure ISBN is unique.
+
+Remember:
+Use th:action in your forms to specify where the form data should be sent.
+Use both GET (for displaying forms and lists) and POST (for form submissions) requests in your
+controller.
+Start by setting up your project, creating your entities, and then step by step implement each
+feature. This project encompasses the areas you wanted to focus on and should provide a
+comprehensive practice. Good luck, and I'm here to help along the way!
